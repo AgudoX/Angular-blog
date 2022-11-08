@@ -1,0 +1,61 @@
+/* 
+:root {
+    --Dark-Blue: hsl(217, 28%, 15%);
+      intro and email sign up background
+    Dark-Blue-Background
+      main background
+    Dark-Blue-Footer
+      footer background
+    Dark-Blue-Article
+     testimonials background 
+    Cyan
+     inside call-to-action gradient 
+    Blue 
+     inside call-to-action gradient 
+    Light-Red 
+     error 
+     */
+
+
+nav ul {
+    background-color: var(--Dark-Blue);
+    color: white;
+    font-family: 'Raleway';
+    font-weight: 400;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul figure img {
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+    transition: 1s;
+    cursor: pointer;
+}
+
+nav ul figure img:hover {
+    width: 80px;
+    height: 80px;
+    margin: 12px;
+
+}
+
+nav ul div.links {
+    display: flex;
+    list-style: none;
+    margin: 30px;
+    gap: 30px;
+
+}
+
+nav ul div.links li {
+    transition: 1s;
+}
+
+nav ul div.links li:hover {
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.2em;
+}

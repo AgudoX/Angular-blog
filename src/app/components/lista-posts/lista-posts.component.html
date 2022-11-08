@@ -1,1 +1,16 @@
-<p>lista-posts works!</p>
+<section>
+    <h2>BLOG</h2>
+    <div class="flex">
+        <article *ngFor="let post of arrPosts">
+            <figure>
+                <img [src]="post.image" [alt]="post.category">
+            </figure>
+            <div>
+                <small>{{post.author}}</small>
+                <h3>{{post.title}}</h3>
+                <p> <span>Description:</span> {{post.text}}</p>
+                <small>{{post.category}}🔖</small>
+            </div>
+        </article>
+    </div>
+</section>

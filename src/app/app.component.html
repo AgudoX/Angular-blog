@@ -1,1 +1,16 @@
+<header>
+    <nav>
+        <ul>
+            <figure>
+                <img [routerLink]="['posts']" src="../assets/images/ai.png" alt="logo">
+            </figure>
+            <div class="links">
+                <li [routerLink]="['posts']">Blog</li>
+                <li [routerLink]="['blog', 'new']">Create new post</li>
+            </div>
+        </ul>
+    </nav>
+</header>
+
+
 <router-outlet></router-outlet>

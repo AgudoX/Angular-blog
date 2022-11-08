@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+/* font-families */
+/* Headings, Call-to-actions, Header Navigation 
+Weights: 400, 700*/
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+/* Body Weights: 400, 700*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic);
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Dark-Blue: hsl(217, 28%, 15%);
+    /*  intro and email sign up background*/
+    --Dark-Blue-Background: hsl(218, 28%, 13%);
+    /*  main background*/
+    --Dark-Blue-Footer: hsl(216, 53%, 9%);
+    /*  footer background*/
+    --Dark-Blue-Article: hsl(219, 30%, 18%);
+    /* testimonials background */
+    --Cyan: hsl(176, 68%, 64%);
+    /* inside call-to-action gradient */
+    --Blue: hsl(198, 60%, 50%);
+    /* inside call-to-action gradient */
+    --Light-Red: hsl(0, 100%, 63%);
+    /* error */
+}
