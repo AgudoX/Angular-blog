@@ -1,30 +1,37 @@
-<form>
+<form [formGroup]="formulario" (submit)="onSubmit(formulario)">
     <h2>Create new post</h2>
     <div class="container">
         <div>
-            <input type="text" placeholder="Write the title of the post">
+            <input formControlName="title" type="text" placeholder="Write the title of the post">
+            <small *ngIf="errorChecker('title', 'required')" class="error">Required</small>
         </div>
         <div>
-            <input type="text" placeholder="Author">
+            <input formControlName="author" type="text" placeholder="Author">
+            <small *ngIf="errorChecker('author', 'required')" class="error">Required</small>
         </div>
         <div>
-            <input type="text" placeholder="image url: https://www.example.com">
+            <input formControlName="image" type="text" placeholder="image url: https://www.example.com">
+            <small *ngIf="errorChecker('image', 'required')" class="error">Required</small>
+            <small *ngIf="errorChecker('image', 'pattern')" class="error">Url format needed</small>
         </div>
         <div>
-            <textarea placeholder="Write the content of the post"></textarea>
-
+            <textarea formControlName="text" placeholder="Write the content of the post"></textarea>
+            <small *ngIf="errorChecker('text', 'required')" class="error">Required</small>
         </div>
         <div>
-            <select>
+            <select formControlName="category">
                 <option value="" selected disabled>Category</option>
                 <option *ngFor="let category of arrCategories" [value]="category">{{category}}</option>
             </select>
+            <small *ngIf="errorChecker('category', 'required')" class="error">Required</small>
         </div>
         <div>
-            <input type="date">
+            <input formControlName="date" type="date">
+            <small *ngIf="errorChecker('date', 'required')" class="error">Required</small>
         </div>
         <div>
-            <input type="submit" value="Publish post">
+            <input type="submit" value="Publish post" [disabled]="formulario.invalid"
+                [ngClass]="{'blocked': formulario.invalid}">
         </div>
     </div>
 </form>

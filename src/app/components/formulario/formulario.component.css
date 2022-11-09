@@ -30,6 +30,17 @@ div.container div {
     /* text-align: center; */
 }
 
+div.container div small {
+    font-family: 'Open Sans';
+    margin: 0px 0px 0px 5px;
+    color: white;
+}
+
+div.container div small.error {
+    color: var(--Light-Red);
+}
+
+
 div.container div:first-child input {
     width: 80%;
     height: 40px;
@@ -145,4 +156,28 @@ div.container div input[type="submit"] {
 div.container div input[type="submit"]:hover {
     background-color: var(--Dark-Blue-Background);
     box-shadow: 5px 5px 10px 1px #000;
+}
+
+div.container div input[type="submit"]:hover.blocked {
+    background-color: var(--Blue);
+    opacity: 0.5;
+    box-shadow: none;
+}
+
+div.container div input[type="submit"].blocked {
+    cursor: auto;
+    opacity: 0.5;
+}
+
+
+div.container div input.ng-invalid.ng-touched {
+    border: 3px solid var(--Light-Red);
+}
+
+div.container select.ng-invalid.ng-touched {
+    border: 3px solid var(--Light-Red);
+}
+
+div.container div textarea.ng-invalid.ng-touched {
+    border: 3px solid var(--Light-Red);
 }
