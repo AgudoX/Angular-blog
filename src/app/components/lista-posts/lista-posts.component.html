@@ -1,5 +1,10 @@
 <section>
     <h2>BLOG</h2>
+    <select (change)="onChange($event)">
+        <option selected disabled>Filter by category</option>
+        <option value="all">Get all</option>
+        <option *ngFor="let category of arrCategories" [value]="category">{{category}}</option>
+    </select>
     <div class="flex">
         <article *ngFor="let post of arrPosts">
             <figure>

@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ListaPostsComponent } from './components/lista-posts/lista-posts.component';
 import { PostComponent } from './components/post/post.component';
 import { FormularioComponent } from './components/formulario/formulario.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FormularioComponent } from './components/formulario/formulario.componen
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

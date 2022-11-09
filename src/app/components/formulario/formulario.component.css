@@ -1,0 +1,148 @@
+form {
+    background-color: var(--Dark-Blue-Background);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+form h2 {
+    color: white;
+    font-family: 'Raleway';
+    text-align: center;
+    text-shadow: 2px 2px 2px black;
+    font-size: 2em;
+}
+
+div.container {
+    height: 560px;
+    width: 80%;
+    min-width: 350px;
+    margin: 30px auto;
+    font-family: 'Open Sans';
+    background-color: var(--Dark-Blue-Article);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 1px #000;
+}
+
+
+div.container div {
+    margin: 15px auto;
+    /* text-align: center; */
+}
+
+div.container div:first-child input {
+    width: 80%;
+    height: 40px;
+    font-family: 'Open Sans';
+    background-color: var(--Dark-Blue);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid gray;
+    transition: .6s;
+}
+
+div.container div:first-child input:hover {
+    background-color: var(--Dark-Blue-Article);
+    box-shadow: 5px 5px 10px 1px #000;
+}
+
+div.container :is(div:nth-child(2), div:nth-child(3)) input {
+    width: 80%;
+    height: 40px;
+    font-family: 'Open Sans';
+    background-color: var(--Dark-Blue);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid gray;
+    transition: .6s;
+}
+
+div.container :is(div:nth-child(2), div:nth-child(3)) input:hover {
+    background-color: var(--Dark-Blue-Article);
+    box-shadow: 5px 5px 10px 1px #000;
+}
+
+div.container textarea {
+    height: 150px;
+    width: 100%;
+    font-family: 'Open Sans';
+    font-size: 14px;
+    color: white;
+    background-color: var(--Dark-Blue);
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding: 4px;
+    transition: .6s;
+}
+
+div.container textarea:hover {
+    background-color: var(--Dark-Blue-Article);
+    box-shadow: 5px 5px 10px 1px #000;
+}
+
+div.container select {
+    width: 50%;
+    height: 40px;
+    font-family: 'Open Sans';
+    background-color: var(--Dark-Blue);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid gray;
+    transition: .6s;
+    cursor: pointer;
+}
+
+div.container select option {
+    font-family: 'Open Sans';
+    font-size: 16px;
+}
+
+div.container select:hover {
+    background-color: var(--Dark-Blue-Article);
+    box-shadow: 5px 5px 10px 1px #000;
+}
+
+
+div.container input[type="date"] {
+    width: 50%;
+    height: 40px;
+    font-family: 'Open Sans';
+    background-color: var(--Dark-Blue);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid gray;
+    transition: .6s;
+    cursor: pointer;
+}
+
+div.container input[type="date"]:hover {
+    background-color: var(--Dark-Blue-Article);
+    box-shadow: 5px 5px 10px 1px #000;
+}
+
+div.container div input[type="submit"] {
+    display: block;
+    margin: 20px auto;
+    width: 50%;
+    height: 40px;
+    font-weight: 700;
+    font-size: 18px;
+    text-shadow: 1px 1px 2px black;
+    font-family: 'Raleway';
+    background-color: var(--Blue);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    transition: .6s;
+    cursor: pointer;
+}
+
+div.container div input[type="submit"]:hover {
+    background-color: var(--Dark-Blue-Background);
+    box-shadow: 5px 5px 10px 1px #000;
+}

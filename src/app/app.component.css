@@ -22,23 +22,20 @@ nav ul {
     color: white;
     font-family: 'Raleway';
     font-weight: 400;
-    height: 100px;
+    height: 150px;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 nav ul figure img {
-    width: 70px;
-    height: 70px;
-    margin: 10px;
+    width: 140px;
+    height: 140px;
     transition: 1s;
     cursor: pointer;
 }
 
 nav ul figure img:hover {
-    width: 80px;
-    height: 80px;
-    margin: 12px;
+    padding: 5px;
 
 }
 
@@ -52,6 +49,7 @@ nav ul div.links {
 
 nav ul div.links li {
     transition: 1s;
+    text-shadow: 1px 1px 2px black;
 }
 
 nav ul div.links li:hover {

@@ -9,13 +9,23 @@ import { PostService } from 'src/app/services/post.service';
 })
 export class ListaPostsComponent implements OnInit {
   arrPosts: Post[]
+  arrCategories: string[]
   constructor(private postsService: PostService) {
     this.arrPosts = []
+    this.arrCategories = []
   }
 
   ngOnInit(): void {
     this.arrPosts = this.postsService.getAll()
-    console.log(this.arrPosts)
+    this.arrCategories = this.postsService.getAllCategories()
+  }
+
+  onChange($event: any) {
+    if ($event.target.value === 'all') {
+      return this.arrPosts = this.postsService.getAll()
+    } else {
+      return this.arrPosts = this.postsService.getByCategories($event.target.value)
+    }
   }
 
 }

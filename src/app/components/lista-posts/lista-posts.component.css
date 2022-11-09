@@ -18,6 +18,7 @@
 
 section {
     background-color: var(--Dark-Blue-Background);
+    min-height: 100vh;
 }
 
 section h2 {
@@ -25,6 +26,7 @@ section h2 {
     font-family: 'Raleway';
     color: white;
     padding: 20px;
+    text-shadow: 2px 2px 2px black;
 }
 
 .flex {
@@ -50,7 +52,8 @@ section article {
 }
 
 section article:hover {
-    padding: 10px;
+    padding: 4px;
+    box-shadow: 5px 5px 10px 1px #000;
 }
 
 section article figure {
@@ -103,4 +106,30 @@ article span {
 article p {
     color: rgb(172, 170, 170);
     font-size: 14px;
+}
+
+select {
+    height: 50px;
+    width: 220px;
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 18px;
+    margin: 15px;
+    color: white;
+    background-color: var(--Dark-Blue-Article);
+    border-radius: 10px;
+    border: 2px solid var(--Cyan);
+    transition: 1s;
+    cursor: pointer;
+    text-shadow: 1px 1px 2px black;
+}
+
+select:hover {
+    background-color: var(--Dark-Blue);
+}
+
+select option {
+    font-size: 18px;
+    transition: 1s;
+    background-color: var(--Dark-Blue);
 }

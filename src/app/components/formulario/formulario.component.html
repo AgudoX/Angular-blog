@@ -1,1 +1,30 @@
-<p>formulario works!</p>
+<form>
+    <h2>Create new post</h2>
+    <div class="container">
+        <div>
+            <input type="text" placeholder="Write the title of the post">
+        </div>
+        <div>
+            <input type="text" placeholder="Author">
+        </div>
+        <div>
+            <input type="text" placeholder="image url: https://www.example.com">
+        </div>
+        <div>
+            <textarea placeholder="Write the content of the post"></textarea>
+
+        </div>
+        <div>
+            <select>
+                <option value="" selected disabled>Category</option>
+                <option *ngFor="let category of arrCategories" [value]="category">{{category}}</option>
+            </select>
+        </div>
+        <div>
+            <input type="date">
+        </div>
+        <div>
+            <input type="submit" value="Publish post">
+        </div>
+    </div>
+</form>

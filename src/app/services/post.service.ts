@@ -9,59 +9,83 @@ export class PostService {
   arrCategories: string[]
   constructor() {
     this.arrCategories = [
-      "personas",
-      "zombies",
-      "anime",
-      "lol"
+
     ]
 
 
     this.arrPosts = [
       {
         id: 0,
-        title: 'Titulo de prueba',
+        title: 'Aphrodite',
         text: 'Esto es un texto de prueba, haré lo que pueda y más de lo que pueda si es que eso es posible y haré lo posible incluso lo imposible',
         author: 'Javier Agudo',
-        image: '../assets/images/imagen1.webp',
+        image: '../assets/images/Aphrodite.webp',
         date: new Date('12/09/2022'),
-        category: 'lol'
+        category: 'Greek'
       },
       {
         id: 0,
-        title: 'Titulo de prueba',
+        title: 'Hades',
         text: 'Esto es un texto de prueba',
         author: 'Javier Agudo',
-        image: '../assets/images/imagen1.webp',
+        image: '../assets/images/Hades.webp',
         date: new Date('12/09/2022'),
-        category: 'lol'
+        category: 'Greek'
       },
       {
         id: 0,
-        title: 'Titulo de prueba',
+        title: 'Hercules',
         text: 'Esto es un texto de prueba',
         author: 'Javier Agudo',
-        image: '../assets/images/imagen1.webp',
+        image: '../assets/images/Hercules.webp',
         date: new Date('12/09/2022'),
-        category: 'personas'
+        category: 'Greek'
       },
       {
         id: 0,
-        title: 'Titulo de prueba',
+        title: 'Loki',
         text: 'Esto es un texto de prueba',
         author: 'Javier Agudo',
-        image: '../assets/images/imagen1.webp',
+        image: '../assets/images/Loki.webp',
         date: new Date('12/09/2022'),
-        category: 'anime'
+        category: 'Nordic'
       },
       {
         id: 0,
-        title: 'Titulo de prueba',
+        title: 'Odin',
         text: 'Esto es un texto de prueba',
         author: 'Javier Agudo',
-        image: '../assets/images/imagen1.webp',
+        image: '../assets/images/Odin.webp',
         date: new Date('12/09/2022'),
-        category: 'zombies'
+        category: 'Nordic'
       },
+      {
+        id: 0,
+        title: 'Zeus',
+        text: 'Esto es un texto de prueba',
+        author: 'Javier Agudo',
+        image: '../assets/images/zeus.webp',
+        date: new Date('12/09/2022'),
+        category: 'Greek'
+      },
+      {
+        id: 0,
+        title: 'Osiris',
+        text: 'Esto es un texto de prueba',
+        author: 'Javier Agudo',
+        image: '../assets/images/Osiris.webp',
+        date: new Date('12/09/2022'),
+        category: 'Egyptian'
+      },
+      {
+        id: 0,
+        title: 'Anubis',
+        text: 'Esto es un texto de prueba',
+        author: 'Javier Agudo',
+        image: '../assets/images/Anubis.webp',
+        date: new Date('12/09/2022'),
+        category: 'Egyptian'
+      }
     ]
   }
 
@@ -77,13 +101,13 @@ export class PostService {
 
   /* Se utiliza para filtrar los posts por categorias */
   getByCategories(categoria: string) {
-    return this.arrPosts.filter((post) => {
-      post.category === categoria
-    })
+    return this.arrPosts.filter(post => post.category === categoria
+    )
   }
 
-  /* Se utiliza en el formulario para que en el select se dibujen las categorias automáticamente con un for of */
+  /* Se utiliza para que en el select de lista-posts.html se dibujen las categorias automáticamente con un for of */
   getAllCategories() {
-    return this.arrCategories
+    this.arrCategories = this.arrPosts.map(pPost => pPost.category)
+    return this.arrCategories = [...new Set(this.arrCategories)]
   }
 }
