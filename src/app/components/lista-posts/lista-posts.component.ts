@@ -16,7 +16,11 @@ export class ListaPostsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.arrPosts = this.postsService.getAll()
+    if (JSON.parse(localStorage.getItem('blog')!)) {
+      this.arrPosts = JSON.parse(localStorage.getItem('blog')!)
+    } else {
+      this.arrPosts = this.postsService.getAll()
+    }
     this.arrCategories = this.postsService.getAllCategories()
   }
 
@@ -26,6 +30,9 @@ export class ListaPostsComponent implements OnInit {
     } else {
       return this.arrPosts = this.postsService.getByCategories($event.target.value)
     }
+  }
+  onClick(pId: number) {
+    return this.arrPosts = this.postsService.removePost(pId)
   }
 
 }

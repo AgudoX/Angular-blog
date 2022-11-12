@@ -13,7 +13,9 @@ export class FormularioComponent implements OnInit {
   regularExp: RegExp
   constructor(private postsService: PostService) {
     this.regularExp = new RegExp('^http(s)?\://[a-zA-Z0-9\-\.]+\.')
+
     this.arrCategories = this.postsService.getAllCategories()
+
     this.formulario = new FormGroup({
       title: new FormControl('', [Validators.required]),
       text: new FormControl('', [Validators.required]),
@@ -29,6 +31,7 @@ export class FormularioComponent implements OnInit {
 
   onSubmit(formu: any) {
     let newPost = formu.value
+    newPost.id = this.postsService.getAll().length
     formu.reset()
     return this.postsService.createPost(newPost)
   }

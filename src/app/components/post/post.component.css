@@ -1,0 +1,76 @@
+/* 
+:root {
+    --Dark-Blue: hsl(217, 28%, 15%);
+      intro and email sign up background
+    Dark-Blue-Background
+      main background
+    Dark-Blue-Footer
+      footer background
+    Dark-Blue-Article
+     testimonials background 
+    Cyan
+     inside call-to-action gradient 
+    Blue 
+     inside call-to-action gradient 
+    Light-Red 
+     error 
+     */
+div.container {
+  background-color: var(--Dark-Blue-Background);
+  padding: 20px;
+  min-height: 100vh;
+  position: relative;
+}
+
+div.container div.article h3 {
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+  font-family: 'Raleway';
+  font-size: 2em;
+
+}
+
+div.container div.article img {
+  display: block;
+  height: 300px;
+  width: 300px;
+  border-radius: 10px;
+  margin: 20px auto;
+
+}
+
+div.container div.article small {
+  text-shadow: 1px 1px 2px black;
+  color: white;
+  font-family: 'Open Sans';
+  font-style: italic;
+
+}
+
+div.container div.article small:first-of-type {
+  font-size: 20px;
+  position: absolute;
+  top: 2%;
+  right: 4%;
+  font-weight: bold;
+}
+
+
+div.container div.article p {
+  font-size: 18px;
+  color: white;
+  font-family: 'Open Sans';
+  text-align: justify;
+  margin: 0 auto;
+  width: 80%;
+
+}
+
+div.container div.article small:last-of-type {
+  font-size: 17px;
+  font-weight: bold;
+  text-align: right;
+  display: block;
+  margin: 20px auto;
+}

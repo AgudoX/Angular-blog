@@ -17,6 +17,7 @@
      */
 
 
+
 nav ul {
     background-color: var(--Dark-Blue);
     color: white;
@@ -24,7 +25,6 @@ nav ul {
     font-weight: 400;
     height: 150px;
     display: flex;
-    /* justify-content: space-between; */
 }
 
 nav ul figure img {
@@ -56,4 +56,8 @@ nav ul div.links li:hover {
     cursor: pointer;
     font-weight: 700;
     font-size: 1.2em;
+}
+
+.activo {
+    color: var(--Blue);
 }

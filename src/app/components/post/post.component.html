@@ -1,1 +1,9 @@
-<p>post works!</p>
+<div class="container">
+    <div class="article">
+        <h3>{{this.onePost[0].title}}</h3>
+        <img [src]="this.onePost[0].image" [alt]="this.onePost[0].title">
+        <small>{{this.onePost[0].category}}🔖</small>
+        <p>{{this.onePost[0].text}}</p>
+        <small>{{this.onePost[0].author}}📑 - {{onePost[0].date|date: 'd MMM y'}}</small>
+    </div>
+</div>

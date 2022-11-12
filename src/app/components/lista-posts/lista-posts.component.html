@@ -1,3 +1,9 @@
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
 <section>
     <h2>BLOG</h2>
     <select (change)="onChange($event)">
@@ -6,14 +12,16 @@
         <option *ngFor="let category of arrCategories" [value]="category">{{category}}</option>
     </select>
     <div class="flex">
-        <article *ngFor="let post of arrPosts">
+        <article *ngFor="let post of arrPosts" [routerLink]="['/posts',post.id]">
             <figure>
                 <img [src]="post.image" [alt]="post.category">
             </figure>
             <div>
-                <small>{{post.author}}</small>
+                <i (click)="onClick(post.id!)" class="fa-solid fa-trash"></i>
+                <small>{{post.author}}📑</small>
                 <h3>{{post.title}}</h3>
                 <p> <span>Description:</span> {{post.text}}</p>
+                <small class="fecha">{{post.date|date:'d MMM y'}}</small>
                 <small>{{post.category}}🔖</small>
             </div>
         </article>

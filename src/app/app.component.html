@@ -5,8 +5,8 @@
                 <img [routerLink]="['posts']" src="../assets/images/logo_web.png" alt="logo">
             </figure>
             <div class="links">
-                <li [routerLink]="['posts']">Blog</li>
-                <li [routerLink]="['blog', 'new']">Create new post</li>
+                <li [routerLink]="['posts']" [routerLinkActive]="'activo'">Blog</li>
+                <li [routerLink]="['blog', 'new']" [routerLinkActive]="'activo'">Create new post</li>
             </div>
         </ul>
     </nav>
